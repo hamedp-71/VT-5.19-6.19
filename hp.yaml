@@ -132,9 +132,7 @@
       "early-data-header-name": "Sec-WebSocket-Protocol"
     },
     "servername": "fqjEDaZa7b2vofj9IhEmX319rmO41L7B.PaGES.dEV",
-    "alpn": [
-      "http/1.1"
-    ],
+    "alpn": ["http/1.1"],
     "client-fingerprint": "random",
     "skip-cert-verify": false
   },
@@ -159,9 +157,7 @@
       "early-data-header-name": "Sec-WebSocket-Protocol"
     },
     "servername": "FqJEdAzA7B2vOfJ9IHeMX319rmO41L7B.pages.DEv",
-    "alpn": [
-      "http/1.1"
-    ],
+    "alpn": ["http/1.1"],
     "client-fingerprint": "random",
     "skip-cert-verify": false
   },
@@ -186,9 +182,7 @@
       "early-data-header-name": "Sec-WebSocket-Protocol"
     },
     "servername": "FqJedaZa7b2vOfj9iheMx319RmO41L7B.pagES.DEV",
-    "alpn": [
-      "http/1.1"
-    ],
+    "alpn": ["http/1.1"],
     "client-fingerprint": "random",
     "skip-cert-verify": false
   },
@@ -212,10 +206,8 @@
       "max-early-data": 2560,
       "early-data-header-name": "Sec-WebSocket-Protocol"
     },
-    "servername": "fqJeDAZA7B2vOFJ9iHeMX319rMo41L7b.PAGES.Dev",
-    "alpn": [
-      "http/1.1"
-    ],
+    "servername": "fqJeDAZA7B2vOFJ9iHeMX319rMo41l7b.PAGES.Dev",
+    "alpn": ["http/1.1"],
     "client-fingerprint": "random",
     "skip-cert-verify": false
   },
@@ -240,9 +232,7 @@
       "early-data-header-name": "Sec-WebSocket-Protocol"
     },
     "servername": "fQjEDaZA7b2VOfj9iheMx319rMo41l7b.paGes.dEV",
-    "alpn": [
-      "http/1.1"
-    ],
+    "alpn": ["http/1.1"],
     "client-fingerprint": "random",
     "skip-cert-verify": false
   },
@@ -267,326 +257,302 @@
       "early-data-header-name": "Sec-WebSocket-Protocol"
     },
     "servername": "fqJEdaZA7b2VOfj9iHeMX319Rmo41L7B.paGes.deV",
-    "alpn": [
-      "http/1.1"
-    ],
+    "alpn": ["http/1.1"],
     "client-fingerprint": "random",
     "skip-cert-verify": false
   },
   {
-            "name": "💦 7 - VLESS - IPv4 - 443",
-            "type": "vless",
-            "server": "104.21.96.1",
-            "port": 443,
-            "uuid": "0f0c8014-6c01-46b6-b0cc-2f76d6bae7f6",
-            "packet-encoding": "packetaddr",
-            "ip-version": "ipv4",
-            "tls": true,
-            "network": "ws",
-            "tfo": true,
-            "mptcp": true,
-            "ws-opts": {
-                "path": "/gimpHIbTNyashsNe/MzUuMTU3LjI0MC4yMzcsMTguMTk4LjIyNy4xNjE=",
-                "headers": {
-                    "Host": "fqjedaza7b2vofj9ihemx319rmo41l7b.pages.dev"
-                },
-                "max-early-data": 2560,
-                "early-data-header-name": "Sec-WebSocket-Protocol"
-            },
-            "servername": "fQJeDazA7b2VOFj9IHemX319rMo41l7b.PAGES.DeV",
-            "alpn": [
-                "http/1.1"
-            ],
-            "client-fingerprint": "random",
-            "skip-cert-verify": false
-        },
-        {
-            "name": "💦 8 - VLESS - IPv4 - 443",
-            "type": "vless",
-            "server": "104.21.112.1",
-            "port": 443,
-            "uuid": "0f0c8014-6c01-46b6-b0cc-2f76d6bae7f6",
-            "packet-encoding": "packetaddr",
-            "ip-version": "ipv4",
-            "tls": true,
-            "network": "ws",
-            "tfo": true,
-            "mptcp": true,
-            "ws-opts": {
-                "path": "/pjaC1VdJozGvKa9G/MzUuMTU3LjI0MC4yMzcsMTguMTk4LjIyNy4xNjE=",
-                "headers": {
-                    "Host": "fqjedaza7b2vofj9ihemx319rmo41l7b.pages.dev"
-                },
-                "max-early-data": 2560,
-                "early-data-header-name": "Sec-WebSocket-Protocol"
-            },
-            "servername": "FqJedaza7B2vOfj9IHemx319rMO41l7b.PaGES.DEV",
-            "alpn": [
-                "http/1.1"
-            ],
-            "client-fingerprint": "random",
-            "skip-cert-verify": false
-        },
-        {
-            "name": "💦 9 - VLESS - IPv4 - 443",
-            "type": "vless",
-            "server": "104.21.64.1",
-            "port": 443,
-            "uuid": "0f0c8014-6c01-46b6-b0cc-2f76d6bae7f6",
-            "packet-encoding": "packetaddr",
-            "ip-version": "ipv4",
-            "tls": true,
-            "network": "ws",
-            "tfo": true,
-            "mptcp": true,
-            "ws-opts": {
-                "path": "/SgQ7PncyYPFGZdl6/MzUuMTU3LjI0MC4yMzcsMTguMTk4LjIyNy4xNjE=",
-                "headers": {
-                    "Host": "fqjedaza7b2vofj9ihemx319rmo41l7b.pages.dev"
-                },
-                "max-early-data": 2560,
-                "early-data-header-name": "Sec-WebSocket-Protocol"
-            },
-            "servername": "fqjeDAZa7B2VOfJ9IHEmX319rmO41L7B.PaGES.DEv",
-            "alpn": [
-                "http/1.1"
-            ],
-            "client-fingerprint": "random",
-            "skip-cert-verify": false
-        },
-        {
-            "name": "💦 1 - Trojan - Domain - 443",
-            "type": "trojan",
-            "server": "fqjedaza7b2vofj9ihemx319rmo41l7b.pages.dev",
-            "port": 443,
-            "password": ")x$AQ3HS2z,?",
-            "ip-version": "ipv4",
-            "tls": true,
-            "network": "ws",
-            "tfo": true,
-            "mptcp": true,
-            "ws-opts": {
-                "path": "/trbmSXXy6li8wSR5ki/MzUuMTU3LjI0MC4yMzcsMTguMTk4LjIyNy4xNjE=",
-                "headers": {
-                    "Host": "fqjedaza7b2vofj9ihemx319rmo41l7b.pages.dev"
-                },
-                "max-early-data": 2560,
-                "early-data-header-name": "Sec-WebSocket-Protocol"
-            },
-            "sni": "FqjEDaZA7B2VofJ9ihEmx319rMO41l7B.paGeS.deV",
-            "alpn": [
-                "http/1.1"
-            ],
-            "client-fingerprint": "random",
-            "skip-cert-verify": false
-        },
-        {
-            "name": "💦 2 - Trojan - Domain - 443",
-            "type": "trojan",
-            "server": "www.speedtest.net",
-            "port": 443,
-            "password": ")x$AQ3HS2z,?",
-            "ip-version": "ipv4",
-            "tls": true,
-            "network": "ws",
-            "tfo": true,
-            "mptcp": true,
-            "ws-opts": {
-                "path": "/trjcfBRi5PA1D8k7PP/MzUuMTU3LjI0MC4yMzcsMTguMTk4LjIyNy4xNjE=",
-                "headers": {
-                    "Host": "fqjedaza7b2vofj9ihemx319rmo41l7b.pages.dev"
-                },
-                "max-early-data": 2560,
-                "early-data-header-name": "Sec-WebSocket-Protocol"
-            },
-            "sni": "fqJEdazA7b2VOFJ9IhEmX319RMo41L7B.pAGEs.dEv",
-            "alpn": [
-                "http/1.1"
-            ],
-            "client-fingerprint": "random",
-            "skip-cert-verify": false
-        },
-        {
-            "name": "💦 3 - Trojan - IPv4 - 443",
-            "type": "trojan",
-            "server": "104.21.16.1",
-            "port": 443,
-            "password": ")x$AQ3HS2z,?",
-            "ip-version": "ipv4",
-            "tls": true,
-            "network": "ws",
-            "tfo": true,
-            "mptcp": true,
-            "ws-opts": {
-                "path": "/trdnItG8hGeFjco0Rm/MzUuMTU3LjI0MC4yMzcsMTguMTk4LjIyNy4xNjE=",
-                "headers": {
-                    "Host": "fqjedaza7b2vofj9ihemx319rmo41l7b.pages.dev"
-                },
-                "max-early-data": 2560,
-                "early-data-header-name": "Sec-WebSocket-Protocol"
-            },
-            "sni": "fqjEDAZa7b2vOFj9iHeMx319rMo41L7b.PagEs.deV",
-            "alpn": [
-                "http/1.1"
-            ],
-            "client-fingerprint": "random",
-            "skip-cert-verify": false
-        },
-        {
-            "name": "💦 4 - Trojan - IPv4 - 443",
-            "type": "trojan",
-            "server": "104.21.32.1",
-            "port": 443,
-            "password": ")x$AQ3HS2z,?",
-            "ip-version": "ipv4",
-            "tls": true,
-            "network": "ws",
-            "tfo": true,
-            "mptcp": true,
-            "ws-opts": {
-                "path": "/trllOQppsmSnq1J6E0/MzUuMTU3LjI0MC4yMzcsMTguMTk4LjIyNy4xNjE=",
-                "headers": {
-                    "Host": "fqjedaza7b2vofj9ihemx319rmo41l7b.pages.dev"
-                },
-                "max-early-data": 2560,
-                "early-data-header-name": "Sec-WebSocket-Protocol"
-            },
-            "sni": "fqJedaza7B2vOFJ9ihEmX319RMO41l7b.PAges.Dev",
-            "alpn": [
-                "http/1.1"
-            ],
-            "client-fingerprint": "random",
-            "skip-cert-verify": false
-        },
-        {
-            "name": "💦 5 - Trojan - IPv4 - 443",
-            "type": "trojan",
-            "server": "104.21.80.1",
-            "port": 443,
-            "password": ")x$AQ3HS2z,?",
-            "ip-version": "ipv4",
-            "tls": true,
-            "network": "ws",
-            "tfo": true,
-            "mptcp": true,
-            "ws-opts": {
-                "path": "/trf5Puy426TrQ9xK8p/MzUuMTU3LjI0MC4yMzcsMTguMTk4LjIyNy4xNjE=",
-                "headers": {
-                    "Host": "fqjedaza7b2vofj9ihemx319rmo41l7b.pages.dev"
-                },
-                "max-early-data": 2560,
-                "early-data-header-name": "Sec-WebSocket-Protocol"
-            },
-            "sni": "fqjEDaza7B2vofj9IHEmX319rMO41L7B.PAGeS.Dev",
-            "alpn": [
-                "http/1.1"
-            ],
-            "client-fingerprint": "random",
-            "skip-cert-verify": false
-        },
-        {
-            "name": "💦 6 - Trojan - IPv4 - 443",
-            "type": "trojan",
-            "server": "104.21.48.1",
-            "port": 443,
-            "password": ")x$AQ3HS2z,?",
-            "ip-version": "ipv4",
-            "tls": true,
-            "network": "ws",
-            "tfo": true,
-            "mptcp": true,
-            "ws-opts": {
-                "path": "/tr0cEuRAmakfhfLQi2/MzUuMTU3LjI0MC4yMzcsMTguMTk4LjIyNy4xNjE=",
-                "headers": {
-                    "Host": "fqjedaza7b2vofj9ihemx319rmo41l7b.pages.dev"
-                },
-                "max-early-data": 2560,
-                "early-data-header-name": "Sec-WebSocket-Protocol"
-            },
-            "sni": "fqJedAZA7b2VOfJ9iHemx319RMo41l7B.PagEs.dEV",
-            "alpn": [
-                "http/1.1"
-            ],
-            "client-fingerprint": "random",
-            "skip-cert-verify": false
-        },
-        {
-            "name": "💦 7 - Trojan - IPv4 - 443",
-            "type": "trojan",
-            "server": "104.21.96.1",
-            "port": 443,
-            "password": ")x$AQ3HS2z,?",
-            "ip-version": "ipv4",
-            "tls": true,
-            "network": "ws",
-            "tfo": true,
-            "mptcp": true,
-            "ws-opts": {
-                "path": "/trjUn0OZFZN9ebkRlX/MzUuMTU3LjI0MC4yMzcsMTguMTk4LjIyNy4xNjE=",
-                "headers": {
-                    "Host": "fqjedaza7b2vofj9ihemx319rmo41l7b.pages.dev"
-                },
-                "max-early-data": 2560,
-                "early-data-header-name": "Sec-WebSocket-Protocol"
-            },
-            "sni": "FQjEDaZa7B2vOfj9IheMx319rMo41l7b.Pages.DeV",
-            "alpn": [
-                "http/1.1"
-            ],
-            "client-fingerprint": "random",
-            "skip-cert-verify": false
-        },
-        {
-            "name": "💦 8 - Trojan - IPv4 - 443",
-            "type": "trojan",
-            "server": "104.21.112.1",
-            "port": 443,
-            "password": ")x$AQ3HS2z,?",
-            "ip-version": "ipv4",
-            "tls": true,
-            "network": "ws",
-            "tfo": true,
-            "mptcp": true,
-            "ws-opts": {
-                "path": "/tr5uiBEngzgHpJxmuk/MzUuMTU3LjI0MC4yMzcsMTguMTk4LjIyNy4xNjE=",
-                "headers": {
-                    "Host": "fqjedaza7b2vofj9ihemx319rmo41l7b.pages.dev"
-                },
-                "max-early-data": 2560,
-                "early-data-header-name": "Sec-WebSocket-Protocol"
-            },
-            "sni": "FQjEDaZa7B2VoFj9IhEmx319rmO41l7B.PAgeS.dEV",
-            "alpn": [
-                "http/1.1"
-            ],
-            "client-fingerprint": "random",
-            "skip-cert-verify": false
-        },
-        {
-            "name": "💦 9 - Trojan - IPv4 - 443",
-            "type": "trojan",
-            "server": "104.21.64.1",
-            "port": 443,
-            "password": ")x$AQ3HS2z,?",
-            "ip-version": "ipv4",
-            "tls": true,
-            "network": "ws",
-            "tfo": true,
-            "mptcp": true,
-            "ws-opts": {
-                "path": "/trh7ayRl0x7WmWiTEy/MzUuMTU3LjI0MC4yMzcsMTguMTk4LjIyNy4xNjE=",
-                "headers": {
-                    "Host": "fqjedaza7b2vofj9ihemx319rmo41l7b.pages.dev"
-                },
-                "max-early-data": 2560,
-                "early-data-header-name": "Sec-WebSocket-Protocol"
-            },
-            "sni": "FQJEDAza7B2VOFJ9iHeMX319Rmo41l7B.PAgeS.dev",
-            "alpn": [
-                "http/1.1"
-            ],
-            "client-fingerprint": "random",
-            "skip-cert-verify": false
+    "name": "🇩🇪 hamedp71-7-V",
+    "type": "vless",
+    "server": "104.21.48.1",
+    "port": 443,
+    "uuid": "0f0c8014-6c01-46b6-b0cc-2f76d6bae7f6",
+    "packet-encoding": "packetaddr",
+    "ip-version": "ipv4",
+    "tls": true,
+    "network": "ws",
+    "tfo": true,
+    "mptcp": true,
+    "ws-opts": {
+      "path": "/ExlY4XUjviaKXLzi/MzUuMTU3LjI0MC4yMzcsMTguMTk4LjIyNy4xNjE=",
+      "headers": {
+        "Host": "fqjedaza7b2vofj9ihemx319rmo41l7b.pages.dev"
+      },
+      "max-early-data": 2560,
+      "early-data-header-name": "Sec-WebSocket-Protocol"
+    },
+    "servername": "FqjEdazA7B2VoFj9iHEMx319Rmo41L7b.pAGes.deV",
+    "alpn": ["http/1.1"],
+    "client-fingerprint": "random",
+    "skip-cert-verify": false
+  },
+  {
+    "name": "🇩🇪 hamedp71-8-V",
+    "type": "vless",
+    "server": "104.21.80.1",
+    "port": 443,
+    "uuid": "0f0c8014-6c01-46b6-b0cc-2f76d6bae7f6",
+    "packet-encoding": "packetaddr",
+    "ip-version": "ipv4",
+    "tls": true,
+    "network": "ws",
+    "tfo": true,
+    "mptcp": true,
+    "ws-opts": {
+      "path": "/nG5Tzs8Y0pht6GSp/MzUuMTU3LjI0MC4yMzcsMTguMTk4LjIyNy4xNjE=",
+      "headers": {
+        "Host": "fqjedaza7b2vofj9ihemx319rmo41l7b.pages.dev"
+      },
+      "max-early-data": 2560,
+      "early-data-header-name": "Sec-WebSocket-Protocol"
+    },
+    "servername": "fqJedAzA7b2vOFJ9IhEMx319rmo41L7b.PAgEs.DEv",
+    "alpn": ["http/1.1"],
+    "client-fingerprint": "random",
+    "skip-cert-verify": false
+  },
+  {
+    "name": "🇩🇪 hamedp71-9-V",
+    "type": "vless",
+    "server": "104.21.64.1",
+    "port": 443,
+    "uuid": "0f0c8014-6c01-46b6-b0cc-2f76d6bae7f6",
+    "packet-encoding": "packetaddr",
+    "ip-version": "ipv4",
+    "tls": true,
+    "network": "ws",
+    "tfo": true,
+    "mptcp": true,
+    "ws-opts": {
+      "path": "/BE0kD8Rtw1GRXrNX/MzUuMTU3LjI0MC4yMzcsMTguMTk4LjIyNy4xNjE=",
+      "headers": {
+        "Host": "fqjedaza7b2vofj9ihemx319rmo41l7b.pages.dev"
+      },
+      "max-early-data": 2560,
+      "early-data-header-name": "Sec-WebSocket-Protocol"
+    },
+    "servername": "fqJEDAza7B2vofj9ihemX319Rmo41l7B.PAGEs.DEv",
+    "alpn": ["http/1.1"],
+    "client-fingerprint": "random",
+    "skip-cert-verify": false
+  },
+  {
+    "name": "🇩🇪 hamedp71-1-T",
+    "type": "trojan",
+    "server": "fqjedaza7b2vofj9ihemx319rmo41l7b.pages.dev",
+    "port": 443,
+    "password": ")x$AQ3HS2z,?",
+    "ip-version": "ipv4",
+    "tls": true,
+    "network": "ws",
+    "tfo": true,
+    "mptcp": true,
+    "ws-opts": {
+      "path": "/trheGotOXOmWyYiL27/MzUuMTU3LjI0MC4yMzcsMTguMTk4LjIyNy4xNjE=",
+      "headers": {
+        "Host": "fqjedaza7b2vofj9ihemx319rmo41l7b.pages.dev"
+      },
+      "max-early-data": 2560,
+      "early-data-header-name": "Sec-WebSocket-Protocol"
+    },
+    "sni": "fQjeDaZA7B2VoFj9iHeMX319RMo41l7B.PAgeS.dev",
+    "alpn": ["http/1.1"],
+    "client-fingerprint": "random",
+    "skip-cert-verify": false
+  },
+  {
+    "name": "🇩🇪 hamedp71-2-T",
+    "type": "trojan",
+    "server": "www.speedtest.net",
+    "port": 443,
+    "password": ")x$AQ3HS2z,?",
+    "ip-version": "ipv4",
+    "tls": true,
+    "network": "ws",
+    "tfo": true,
+    "mptcp": true,
+    "ws-opts": {
+      "path": "/trR6HcD1VYcGGKAvg5/MzUuMTU3LjI0MC4yMzcsMTguMTk4LjIyNy4xNjE=",
+      "headers": {
+        "Host": "fqjedaza7b2vofj9ihemx319rmo41l7b.pages.dev"
+      },
+      "max-early-data": 2560,
+      "early-data-header-name": "Sec-WebSocket-Protocol"
+    },
+    "sni": "FqJEdAza7b2VOFJ9iheMx319rMO41L7b.PagEs.DeV",
+    "alpn": ["http/1.1"],
+    "client-fingerprint": "random",
+    "skip-cert-verify": false
+  },
+  {
+    "name": "🇩🇪 hamedp71-3-T",
+    "type": "trojan",
+    "server": "104.21.16.1",
+    "port": 443,
+    "password": ")x$AQ3HS2z,?",
+    "ip-version": "ipv4",
+    "tls": true,
+    "network": "ws",
+    "tfo": true,
+    "mptcp": true,
+    "ws-opts": {
+      "path": "/trnUJ20mgaO3zGcaKn/MzUuMTU3LjI0MC4yMzcsMTguMTk4LjIyNy4xNjE=",
+      "headers": {
+        "Host": "fqjedaza7b2vofj9ihemx319rmo41l7b.pages.dev"
+      },
+      "max-early-data": 2560,
+      "early-data-header-name": "Sec-WebSocket-Protocol"
+    },
+    "sni": "FQjedaza7b2VofJ9iheMx319rmO41L7b.Pages.dEV",
+    "alpn": ["http/1.1"],
+    "client-fingerprint": "random",
+    "skip-cert-verify": false
+  },
+  {
+    "name": "🇩🇪 hamedp71-4-T",
+    "type": "trojan",
+    "server": "104.21.32.1",
+    "port": 443,
+    "password": ")x$AQ3HS2z,?",
+    "ip-version": "ipv4",
+    "tls": true,
+    "network": "ws",
+    "tfo": true,
+    "mptcp": true,
+    "ws-opts": {
+      "path": "/tryPRkDoG5UgCNwGiz/MzUuMTU3LjI0MC4yMzcsMTguMTk4LjIyNy4xNjE=",
+      "headers": {
+        "Host": "fqjedaza7b2vofj9ihemx319rmo41l7b.pages.dev"
+      },
+      "max-early-data": 2560,
+      "early-data-header-name": "Sec-WebSocket-Protocol"
+    },
+    "sni": "fqjeDaza7B2vOfJ9IhemX319Rmo41L7B.pAGes.dev",
+    "alpn": ["http/1.1"],
+    "client-fingerprint": "random",
+    "skip-cert-verify": false
+  },
+  {
+    "name": "🇩🇪 hamedp71-5-T",
+    "type": "trojan",
+    "server": "104.21.96.1",
+    "port": 443,
+    "password": ")x$AQ3HS2z,?",
+    "ip-version": "ipv4",
+    "tls": true,
+    "network": "ws",
+    "tfo": true,
+    "mptcp": true,
+    "ws-opts": {
+      "path": "/trBf32oR9Dn7oHsa0y/MzUuMTU3LjI0MC4yMzcsMTguMTk4LjIyNy4xNjE=",
+      "headers": {
+        "Host": "fqjedaza7b2vofj9ihemx319rmo41l7b.pages.dev"
+      },
+      "max-early-data": 2560,
+      "early-data-header-name": "Sec-WebSocket-Protocol"
+    },
+    "sni": "FqJEDAzA7B2VoFj9IhEmX319rMO41L7b.PaGES.Dev",
+    "alpn": ["http/1.1"],
+    "client-fingerprint": "random",
+    "skip-cert-verify": false
+  },
+  {
+    "name": "🇩🇪 hamedp71-6-T",
+    "type": "trojan",
+    "server": "104.21.112.1",
+    "port": 443,
+    "password": ")x$AQ3HS2z,?",
+    "ip-version": "ipv4",
+    "tls": true,
+    "network": "ws",
+    "tfo": true,
+    "mptcp": true,
+    "ws-opts": {
+      "path": "/trCAOsE0NOJNnX6zYt/MzUuMTU3LjI0MC4yMzcsMTguMTk4LjIyNy4xNjE=",
+      "headers": {
+        "Host": "fqjedaza7b2vofj9ihemx319rmo41l7b.pages.dev"
+      },
+      "max-early-data": 2560,
+      "early-data-header-name": "Sec-WebSocket-Protocol"
+    },
+    "sni": "FqJedaZA7b2Vofj9ihEMX319RMo41L7B.paGEs.DEV",
+    "alpn": ["http/1.1"],
+    "client-fingerprint": "random",
+    "skip-cert-verify": false
+  },
+  {
+    "name": "🇩🇪 hamedp71-7-T",
+    "type": "trojan",
+    "server": "104.21.48.1",
+    "port": 443,
+    "password": ")x$AQ3HS2z,?",
+    "ip-version": "ipv4",
+    "tls": true,
+    "network": "ws",
+    "tfo": true,
+    "mptcp": true,
+    "ws-opts": {
+      "path": "/trmI0YMJvplVRZm3X4/MzUuMTU3LjI0MC4yMzcsMTguMTk4LjIyNy4xNjE=",
+      "headers": {
+        "Host": "fqjedaza7b2vofj9ihemx319rmo41l7b.pages.dev"
+      },
+      "max-early-data": 2560,
+      "early-data-header-name": "Sec-WebSocket-Protocol"
+    },
+    "sni": "fQJedaza7b2VoFJ9iHEMX319Rmo41L7B.PAgES.dEv",
+    "alpn": ["http/1.1"],
+    "client-fingerprint": "random",
+    "skip-cert-verify": false
+  },
+  {
+    "name": "🇩🇪 hamedp71-8-T",
+    "type": "trojan",
+    "server": "104.21.80.1",
+    "port": 443,
+    "password": ")x$AQ3HS2z,?",
+    "ip-version": "ipv4",
+    "tls": true,
+    "network": "ws",
+    "tfo": true,
+    "mptcp": true,
+    "ws-opts": {
+      "path": "/trycJ9WPuqVMODvRyl/MzUuMTU3LjI0MC4yMzcsMTguMTk4LjIyNy4xNjE=",
+      "headers": {
+        "Host": "fqjedaza7b2vofj9ihemx319rmo41l7b.pages.dev"
+      },
+      "max-early-data": 2560,
+      "early-data-header-name": "Sec-WebSocket-Protocol"
+    },
+    "sni": "FqjEdAza7B2Vofj9iHeMX319rMo41L7B.paGes.Dev",
+    "alpn": ["http/1.1"],
+    "client-fingerprint": "random",
+    "skip-cert-verify": false
+  },
+  {
+    "name": "🇩🇪 hamedp71-9-T",
+    "type": "trojan",
+    "server": "104.21.64.1",
+    "port": 443,
+    "password": ")x$AQ3HS2z,?",
+    "ip-version": "ipv4",
+    "tls": true,
+    "network": "ws",
+    "tfo": true,
+    "mptcp": true,
+    "ws-opts": {
+      "path": "/trYv8lD8ksFndYlLgw/MzUuMTU3LjI0MC4yMzcsMTguMTk4LjIyNy4xNjE=",
+      "headers": {
+        "Host": "fqjedaza7b2vofj9ihemx319rmo41l7b.pages.dev"
+      },
+      "max-early-data": 2560,
+      "early-data-header-name": "Sec-WebSocket-Protocol"
+    },
+    "sni": "fQJEdAza7B2voFj9IheMX319rmO41L7b.PAGES.DeV",
+    "alpn": ["http/1.1"],
+    "client-fingerprint": "random",
+    "skip-cert-verify": false
+  }
+]
         }
     ],
     "proxy-groups": [
