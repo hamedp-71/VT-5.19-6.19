@@ -824,7 +824,7 @@
         "RULE-SET,hp,DIRECT",
         "RULE-SET,lenovo,DIRECT",
         "RULE-SET,ir-cidr,DIRECT",
-        "MATCH,✅ Selector"
+        "MATCH,✅ گلوبال"
     ],
     "ntp": {
         "enable": true,
