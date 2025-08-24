@@ -26,14 +26,18 @@ dns:
   use-system-hosts: false
   nameserver:
     - 'https://8.8.8.8/dns-query#✅ گلوبال'
+    - 'https://dns.google/dns-query'
+    - 'https://1.1.1.1/dns-query'
+    - '178.22.122.100'  # Shecan
+    - '78.157.42.100'   # Electro
   proxy-server-nameserver:
     - '8.8.8.8#DIRECT'
     - '8.8.4.4#DIRECT'
     - '9.9.9.9#DIRECT'
     - '1.1.1.1#DIRECT'
-    - '2606:4700:4700::1111'
-    - '2001:4860:4860::8888'
-    - '2001:4860:4860::8844'
+    - 'https://dns.google/dns-query'
+    - 'https://1.1.1.1/dns-query'
+    - 'https://rustdns.devefun.org/dns-query'
   nameserver-policy:
     raw.githubusercontent.com: '8.8.8.8#DIRECT'
     time.apple.com: '8.8.8.8#DIRECT'
@@ -70,7 +74,7 @@ tun:
   dns-hijack:
     - 'any:53'
     - 'tcp://any:53'
-  mtu: 9000
+  mtu: 1500
 sniffer:
   enable: true
   force-dns-mapping: true
@@ -82,53 +86,26 @@ sniffer:
     TLS:
       ports: [443, 8443, 2053, 2083, 2087, 2096]
 proxies:
-  - name: "🇹🇷 hamedp71 - WireGuard"
-    type: wireguard
-    ip: 10.201.3.192/32
-    private-key: "ONdbWgRkq38T1FO89NsXwBn746AcN0zXOl4zfhp2+F8="
-    server: tr01a.kcufwfgnkr.net
-    port: 62931
-    public-key: "6T9PkVHfTvMfDtKANISJqnW1Ulmd5kYyh8IsVkQYemU="
-    pre-shared-key: "x1asVSzzMUP3h4T6n+V/TnQpqJ7cEnwNF3TzizOuOws="
-    allowed-ips: ["0.0.0.0/0", "::/0"]
-    reserved: "AAAA"
-    udp: true
-    mtu: 1380
-    dialer-proxy: ""
-    amnezia-wg-option:
-      jc: 43
-      jmin: 50
-      jmax: 70
-      s1: 110
-      s2: 120
-      h1: 1593635057
-      h2: 430880481
-      h3: 1214405368
-      h4: 1739253821
+  - name: "🇩🇪 ShadowTLS-Proxy"
+    type: ss
+    server: net2026.safavidempire.org
+    port: 443
+    cipher: chacha20-ietf-poly1305
+    password: "164c1a57-a952-4962-a848-77355f4864fc"
+    plugin: shadow-tls
+    plugin-opts:
+      host: www.google.com
+      password: "164c1a57-a952-4962-a848-77355f4864fc"
+      version: 3
 
-  - name: "🇦🇪 hamedp71 - WireGuard"
-    type: wireguard
-    ip: 10.136.1.207/32
-    private-key: "cFv5swsto2vF1ObPYNoBkAVF2hi1NAL9DJCMBg6+AWc="
-    server: ae01awg.kcufwfgnkr.net
-    port: 60136
-    public-key: "9mn11Gs4ouOhlLdkh1HKfV3zlAZGON9iv4L94dsPmi4="
-    pre-shared-key: "hXQGxBP2Tc0CUNu+bav/4EUw0VTKIuaasDqNKI3TtWE="
-    allowed-ips: ["0.0.0.0/0", "::/0"]
-    reserved: "AAAA"
-    udp: true
-    mtu: 1380
-    dialer-proxy: ""
-    amnezia-wg-option:
-      jc: 43
-      jmin: 50
-      jmax: 70
-      s1: 110
-      s2: 120
-      h1: 1593635057
-      h2: 430880481
-      h3: 1214405368
-      h4: 1739253821
+  - name: "🇩🇪 anytls-443"
+    type: anytls
+    server: 80.240.26.147
+    port: 443
+    password: "qzJvszJHOB"
+    tls: true
+    sni: "suiany.makingirangreatagain.com"
+    servername: "suiany.makingirangreatagain.com"
 
   - name: "🇺🇸 US-hysteria"
     type: hysteria
@@ -168,14 +145,75 @@ proxies:
     up: 11 Mbps
     down: 55 Mbps
 
-  - name: "🇩🇪 anytls-443"
-    type: anytls
-    server: 80.240.26.147
-    port: 443
-    password: "qzJvszJHOB"
-    tls: true
-    sni: "suiany.makingirangreatagain.com"
-    servername: "suiany.makingirangreatagain.com"
+  - name: "🇸🇪 hamedp71 hy2"
+    type: hysteria2
+    server: drhystuichdfy.samanidempire.org
+    port: 20335
+    password: "80747420-96c4-4a2f-83e6-eea4e46beb09"
+    obfs: "salamander"
+    obfs-password: "U1wBrYQyFm"
+    sni: "drhystuichdfy.samanidempire.org"
+    alpn: ["h3"]
+    skip-cert-verify: true
+
+  - name: "🇳🇱 hamedp71 hy2"
+    type: hysteria2
+    server: net2025.afsharidempire.uk
+    port: 30205
+    password: "8864aa9f-7517-4fd5-aef1-32050eb3095d"
+    obfs: "salamander"
+    obfs-password: "GdQ4bgvT8RFwuWi2"
+    sni: "net2025.afsharidempire.uk"
+    skip-cert-verify: true
+    alpn: ["h3"]
+
+  - name: "🇹🇷 hamedp71 - WireGuard"
+    type: wireguard
+    ip: 10.201.3.192/32
+    private-key: "ONdbWgRkq38T1FO89NsXwBn746AcN0zXOl4zfhp2+F8="
+    server: tr01a.kcufwfgnkr.net
+    port: 62931
+    public-key: "6T9PkVHfTvMfDtKANISJqnW1Ulmd5kYyh8IsVkQYemU="
+    pre-shared-key: "x1asVSzzMUP3h4T6n+V/TnQpqJ7cEnwNF3TzizOuOws="
+    allowed-ips: ["0.0.0.0/0", "::/0"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1420
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 43
+      jmin: 50
+      jmax: 70
+      s1: 110
+      s2: 120
+      h1: 1593635057
+      h2: 430880481
+      h3: 1214405368
+      h4: 1739253821
+
+  - name: "🇦🇪 hamedp71 - WireGuard"
+    type: wireguard
+    ip: 10.136.1.207/32
+    private-key: "cFv5swsto2vF1ObPYNoBkAVF2hi1NAL9DJCMBg6+AWc="
+    server: ae01awg.kcufwfgnkr.net
+    port: 60136
+    public-key: "9mn11Gs4ouOhlLdkh1HKfV3zlAZGON9iv4L94dsPmi4="
+    pre-shared-key: "hXQGxBP2Tc0CUNu+bav/4EUw0VTKIuaasDqNKI3TtWE="
+    allowed-ips: ["0.0.0.0/0", "::/0"]
+    reserved: "AAAA"
+    udp: true
+    mtu: 1420
+    dialer-proxy: ""
+    amnezia-wg-option:
+      jc: 43
+      jmin: 50
+      jmax: 70
+      s1: 110
+      s2: 120
+      h1: 1593635057
+      h2: 430880481
+      h3: 1214405368
+      h4: 1739253821
 
   - name: "🇳🇱 1 hamedp71 - Vless"
     type: vless
@@ -649,6 +687,210 @@ proxies:
     client-fingerprint: chrome
     skip-cert-verify: true
 
+  # UK - I
+  - name: "🇬🇧 hamedp71-1-V"
+    type: vless
+    server: 51.195.202.129
+    port: 443
+    uuid: f3939d9d-6638-4c28-a6d0-950f392766af
+    tls: true
+    network: ws
+    ws-opts:
+      path: "/ws"
+      headers:
+        Host: zula.ir
+    sni: "zula.ir"
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    encryption: none
+
+  # UK - II
+  - name: "🇬🇧 hamedp71-2-V"
+    type: vless
+    server: 188.166.150.199
+    port: 443
+    uuid: 9094dfcd-4bf5-4beb-aab7-2dfd813070f8
+    tls: true
+    network: ws
+    ws-opts:
+      path: "/ws"
+      headers:
+        Host: zula.ir
+    sni: "zula.ir"
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    encryption: none
+
+  # ES - I
+  - name: "🇪🇸 hamedp71-3-V"
+    type: vless
+    server: 139.59.209.171
+    port: 443
+    uuid: 7e6bc431-d7b5-4664-811e-8ac2b08ad25e
+    tls: true
+    network: ws
+    ws-opts:
+      path: "/ws"
+      headers:
+        Host: zula.ir
+    sni: "zula.ir"
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    encryption: none
+
+  # FR - I
+  - name: "🇫🇷 hamedp71-4-V"
+    type: vless
+    server: 139.59.213.120
+    port: 443
+    uuid: 2bb5518a-5937-44b7-87ed-8987dddbdd19
+    tls: true
+    network: ws
+    ws-opts:
+      path: "/ws"
+      headers:
+        Host: zula.ir
+    sni: "zula.ir"
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    encryption: none
+
+  # FR - II
+  - name: "🇫🇷 hamedp71-5-V"
+    type: vless
+    server: 51.178.42.187
+    port: 443
+    uuid: 762397ec-790e-4c42-9a50-94d0c10a2b16
+    tls: true
+    network: ws
+    ws-opts:
+      path: "/ws"
+      headers:
+        Host: zula.ir
+    sni: "zula.ir"
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    encryption: none
+
+  # NL - II
+  - name: "🇳🇱 hamedp71-6-V"
+    type: vless
+    server: 134.209.90.171
+    port: 443
+    uuid: cbef22b9-f7fb-48b5-acc3-7044736ed83a
+    tls: true
+    network: ws
+    ws-opts:
+      path: "/ws"
+      headers:
+        Host: 152.42.139.83
+    sni: "zula.ir"
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    encryption: none
+
+  # CA - I
+  - name: "🇨🇦 hamedp71-7-V"
+    type: vless
+    server: 148.113.207.224
+    port: 443
+    uuid: 24ac612c-b1ac-4066-ae1e-24b158b46457
+    tls: true
+    network: ws
+    ws-opts:
+      path: "/ws"
+      headers:
+        Host: zula.ir
+    sni: "zula.ir"
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    encryption: none
+
+  # DE - I
+  - name: "🇩🇪 hamedp71-8-V"
+    type: vless
+    server: 51.195.101.222
+    port: 443
+    uuid: 63c865a4-aedb-43eb-9177-828519561ea9
+    tls: true
+    network: ws
+    ws-opts:
+      path: "/ws"
+      headers:
+        Host: zula.ir
+    sni: "zula.ir"
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    encryption: none
+
+  # DE - II
+  - name: "🇩🇪 hamedp71-9-V"
+    type: vless
+    server: 68.183.216.44
+    port: 443
+    uuid: 1c03bf51-6773-495f-8a44-4111b1ada9aa
+    tls: true
+    network: ws
+    ws-opts:
+      path: "/ws"
+      headers:
+        Host: zula.ir
+    sni: "zula.ir"
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    encryption: none
+
+  # SG - II
+  - name: "🇸🇬 hamedp71-10-V"
+    type: vless
+    server: 68.183.234.52
+    port: 443
+    uuid: 4056f359-d0b1-4aed-8368-8455bc759ed8
+    tls: true
+    network: ws
+    ws-opts:
+      path: "/ws"
+      headers:
+        Host: zula.ir
+    sni: "zula.ir"
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    encryption: none
+
+  # US - II
+  - name: "🇺🇸 hamedp71-11-V"
+    type: vless
+    server: 143.198.15.103
+    port: 443
+    uuid: 5aebb705-2521-49b6-87f0-17dc1d53e77f
+    tls: true
+    network: ws
+    ws-opts:
+      path: "/ws"
+      headers:
+        Host: zula.ir
+    sni: "zula.ir"
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    encryption: none
+
+  # AU - I
+  - name: "🇦🇺 hamedp71-12-V"
+    type: vless
+    server: 209.38.20.147
+    port: 443
+    uuid: 7f8fa84c-6c40-4787-b0b9-a2b3e7420a26
+    tls: true
+    network: ws
+    ws-opts:
+      path: "/ws"
+      headers:
+        Host: zula.ir
+    sni: "zula.ir"
+    client-fingerprint: chrome
+    skip-cert-verify: true
+    encryption: none
+
   - name: "🇸🇪 hamedp71-1-V"
     type: vless
     server: nkang2replace.airlineshoma.com
@@ -957,244 +1199,21 @@ proxies:
     client-fingerprint: chrome
     skip-cert-verify: false
 
-  - name: "🇸🇪 hamedp71 hy2"
-    type: hysteria2
-    server: drhystuichdfy.samanidempire.org
-    port: 20335
-    password: "80747420-96c4-4a2f-83e6-eea4e46beb09"
-    obfs: "salamander"
-    obfs-password: "U1wBrYQyFm"
-    sni: "drhystuichdfy.samanidempire.org"
-    alpn: ["h3"]
-    skip-cert-verify: true
-
-  - name: "🇳🇱 hamedp71 hy2"
-    type: hysteria2
-    server: net2025.afsharidempire.uk
-    port: 30205
-    password: "8864aa9f-7517-4fd5-aef1-32050eb3095d"
-    obfs: "salamander"
-    obfs-password: "GdQ4bgvT8RFwuWi2"
-    sni: "net2025.afsharidempire.uk"
-    skip-cert-verify: true
-    alpn: ["h3"]
-
-  # UK - I
-  - name: "🇬🇧 hamedp71-1-V"
-    type: vless
-    server: 51.195.202.129
-    port: 443
-    uuid: f3939d9d-6638-4c28-a6d0-950f392766af
-    tls: true
-    network: ws
-    ws-opts:
-      path: "/ws"
-      headers:
-        Host: zula.ir
-    sni: "zula.ir"
-    client-fingerprint: chrome
-    skip-cert-verify: true
-    encryption: none
-
-  # UK - II
-  - name: "🇬🇧 hamedp71-2-V"
-    type: vless
-    server: 188.166.150.199
-    port: 443
-    uuid: 9094dfcd-4bf5-4beb-aab7-2dfd813070f8
-    tls: true
-    network: ws
-    ws-opts:
-      path: "/ws"
-      headers:
-        Host: zula.ir
-    sni: "zula.ir"
-    client-fingerprint: chrome
-    skip-cert-verify: true
-    encryption: none
-
-  # ES - I
-  - name: "🇪🇸 hamedp71-3-V"
-    type: vless
-    server: 139.59.209.171
-    port: 443
-    uuid: 7e6bc431-d7b5-4664-811e-8ac2b08ad25e
-    tls: true
-    network: ws
-    ws-opts:
-      path: "/ws"
-      headers:
-        Host: zula.ir
-    sni: "zula.ir"
-    client-fingerprint: chrome
-    skip-cert-verify: true
-    encryption: none
-
-  # FR - I
-  - name: "🇫🇷 hamedp71-4-V"
-    type: vless
-    server: 139.59.213.120
-    port: 443
-    uuid: 2bb5518a-5937-44b7-87ed-8987dddbdd19
-    tls: true
-    network: ws
-    ws-opts:
-      path: "/ws"
-      headers:
-        Host: zula.ir
-    sni: "zula.ir"
-    client-fingerprint: chrome
-    skip-cert-verify: true
-    encryption: none
-
-  # FR - II
-  - name: "🇫🇷 hamedp71-5-V"
-    type: vless
-    server: 51.178.42.187
-    port: 443
-    uuid: 762397ec-790e-4c42-9a50-94d0c10a2b16
-    tls: true
-    network: ws
-    ws-opts:
-      path: "/ws"
-      headers:
-        Host: zula.ir
-    sni: "zula.ir"
-    client-fingerprint: chrome
-    skip-cert-verify: true
-    encryption: none
-
-  # NL - II
-  - name: "🇳🇱 hamedp71-6-V"
-    type: vless
-    server: 134.209.90.171
-    port: 443
-    uuid: cbef22b9-f7fb-48b5-acc3-7044736ed83a
-    tls: true
-    network: ws
-    ws-opts:
-      path: "/ws"
-      headers:
-        Host: 152.42.139.83
-    sni: "zula.ir"
-    client-fingerprint: chrome
-    skip-cert-verify: true
-    encryption: none
-
-  # CA - I
-  - name: "🇨🇦 hamedp71-7-V"
-    type: vless
-    server: 148.113.207.224
-    port: 443
-    uuid: 24ac612c-b1ac-4066-ae1e-24b158b46457
-    tls: true
-    network: ws
-    ws-opts:
-      path: "/ws"
-      headers:
-        Host: zula.ir
-    sni: "zula.ir"
-    client-fingerprint: chrome
-    skip-cert-verify: true
-    encryption: none
-
-  # DE - I
-  - name: "🇩🇪 hamedp71-8-V"
-    type: vless
-    server: 51.195.101.222
-    port: 443
-    uuid: 63c865a4-aedb-43eb-9177-828519561ea9
-    tls: true
-    network: ws
-    ws-opts:
-      path: "/ws"
-      headers:
-        Host: zula.ir
-    sni: "zula.ir"
-    client-fingerprint: chrome
-    skip-cert-verify: true
-    encryption: none
-
-  # DE - II
-  - name: "🇩🇪 hamedp71-9-V"
-    type: vless
-    server: 68.183.216.44
-    port: 443
-    uuid: 1c03bf51-6773-495f-8a44-4111b1ada9aa
-    tls: true
-    network: ws
-    ws-opts:
-      path: "/ws"
-      headers:
-        Host: zula.ir
-    sni: "zula.ir"
-    client-fingerprint: chrome
-    skip-cert-verify: true
-    encryption: none
-
-  # SG - II
-  - name: "🇸🇬 hamedp71-10-V"
-    type: vless
-    server: 68.183.234.52
-    port: 443
-    uuid: 4056f359-d0b1-4aed-8368-8455bc759ed8
-    tls: true
-    network: ws
-    ws-opts:
-      path: "/ws"
-      headers:
-        Host: zula.ir
-    sni: "zula.ir"
-    client-fingerprint: chrome
-    skip-cert-verify: true
-    encryption: none
-
-  # US - II
-  - name: "🇺🇸 hamedp71-11-V"
-    type: vless
-    server: 143.198.15.103
-    port: 443
-    uuid: 5aebb705-2521-49b6-87f0-17dc1d53e77f
-    tls: true
-    network: ws
-    ws-opts:
-      path: "/ws"
-      headers:
-        Host: zula.ir
-    sni: "zula.ir"
-    client-fingerprint: chrome
-    skip-cert-verify: true
-    encryption: none
-
-  # AU - I
-  - name: "🇦🇺 hamedp71-12-V"
-    type: vless
-    server: 209.38.20.147
-    port: 443
-    uuid: 7f8fa84c-6c40-4787-b0b9-a2b3e7420a26
-    tls: true
-    network: ws
-    ws-opts:
-      path: "/ws"
-      headers:
-        Host: zula.ir
-    sni: "zula.ir"
-    client-fingerprint: chrome
-    skip-cert-verify: true
-    encryption: none
-
 proxy-groups:
   - name: "✅ گلوبال"
     type: select
     proxies: 
       - "😎 انتخاب خودکار(بهترین) 😎"
       - "🔁 سیستم فیلبک"
-      - "🇹🇷 hamedp71 - WireGuard"
-      - "🇦🇪 hamedp71 - WireGuard"
+      - "🇩🇪 ShadowTLS-Proxy"
+      - "🇩🇪 anytls-443"
       - "🇺🇸 US-hysteria"
       - "🇺🇸 1 US-hysteria"
       - "🇳🇱 NL-hysteria"
-      - "🇩🇪 anytls-443"
+      - "🇸🇪 hamedp71 hy2"
+      - "🇳🇱 hamedp71 hy2"
+      - "🇹🇷 hamedp71 - WireGuard"
+      - "🇦🇪 hamedp71 - WireGuard"
       - "🇳🇱 1 hamedp71 - Vless"
       - "🇳🇱 2 hamedp71 - Vless"
       - "🇳🇱 3 hamedp71 - Vless"
@@ -1225,6 +1244,18 @@ proxy-groups:
       - "🇩🇪-Direct-VLESS"
       - "🇩🇪-AD-CDN-VLESS"
       - "🇩🇪-Telegram-VLESS"
+      - "🇬🇧 hamedp71-1-V"
+      - "🇬🇧 hamedp71-2-V"
+      - "🇪🇸 hamedp71-3-V"
+      - "🇫🇷 hamedp71-4-V"
+      - "🇫🇷 hamedp71-5-V"
+      - "🇳🇱 hamedp71-6-V"
+      - "🇨🇦 hamedp71-7-V"
+      - "🇩🇪 hamedp71-8-V"
+      - "🇩🇪 hamedp71-9-V"
+      - "🇸🇬 hamedp71-10-V"
+      - "🇺🇸 hamedp71-11-V"
+      - "🇦🇺 hamedp71-12-V"
       - "🇸🇪 hamedp71-1-V"
       - "🇸🇪 hamedp71-2-V"
       - "🇸🇪 hamedp71-3-V"
@@ -1239,20 +1270,6 @@ proxy-groups:
       - "🇸🇪 hamedp71-12-V"
       - "🇸🇪 hamedp71-13-V"
       - "🇸🇪 hamedp71-14-V"
-      - "🇸🇪 hamedp71 hy2"
-      - "🇳🇱 hamedp71 hy2"
-      - "🇬🇧 hamedp71-1-V"
-      - "🇬🇧 hamedp71-2-V"
-      - "🇪🇸 hamedp71-3-V"
-      - "🇫🇷 hamedp71-4-V"
-      - "🇫🇷 hamedp71-5-V"
-      - "🇳🇱 hamedp71-6-V"
-      - "🇨🇦 hamedp71-7-V"
-      - "🇩🇪 hamedp71-8-V"
-      - "🇩🇪 hamedp71-9-V"
-      - "🇸🇬 hamedp71-10-V"
-      - "🇺🇸 hamedp71-11-V"
-      - "🇦🇺 hamedp71-12-V"
 
   - name: "😎 انتخاب خودکار(بهترین) 😎"
     type: url-test
@@ -1260,12 +1277,15 @@ proxy-groups:
     interval: 30
     tolerance: 50
     proxies:
-      - "🇹🇷 hamedp71 - WireGuard"
-      - "🇦🇪 hamedp71 - WireGuard"
+      - "🇩🇪 ShadowTLS-Proxy"
+      - "🇩🇪 anytls-443"
       - "🇺🇸 US-hysteria"
       - "🇺🇸 1 US-hysteria"
       - "🇳🇱 NL-hysteria"
-      - "🇩🇪 anytls-443"
+      - "🇸🇪 hamedp71 hy2"
+      - "🇳🇱 hamedp71 hy2"
+      - "🇹🇷 hamedp71 - WireGuard"
+      - "🇦🇪 hamedp71 - WireGuard"
       - "🇳🇱 1 hamedp71 - Vless"
       - "🇳🇱 2 hamedp71 - Vless"
       - "🇳🇱 3 hamedp71 - Vless"
@@ -1296,6 +1316,18 @@ proxy-groups:
       - "🇩🇪-Direct-VLESS"
       - "🇩🇪-AD-CDN-VLESS"
       - "🇩🇪-Telegram-VLESS"
+      - "🇬🇧 hamedp71-1-V"
+      - "🇬🇧 hamedp71-2-V"
+      - "🇪🇸 hamedp71-3-V"
+      - "🇫🇷 hamedp71-4-V"
+      - "🇫🇷 hamedp71-5-V"
+      - "🇳🇱 hamedp71-6-V"
+      - "🇨🇦 hamedp71-7-V"
+      - "🇩🇪 hamedp71-8-V"
+      - "🇩🇪 hamedp71-9-V"
+      - "🇸🇬 hamedp71-10-V"
+      - "🇺🇸 hamedp71-11-V"
+      - "🇦🇺 hamedp71-12-V"
       - "🇸🇪 hamedp71-1-V"
       - "🇸🇪 hamedp71-2-V"
       - "🇸🇪 hamedp71-3-V"
@@ -1310,32 +1342,21 @@ proxy-groups:
       - "🇸🇪 hamedp71-12-V"
       - "🇸🇪 hamedp71-13-V"
       - "🇸🇪 hamedp71-14-V"
-      - "🇸🇪 hamedp71 hy2"
-      - "🇳🇱 hamedp71 hy2"
-      - "🇬🇧 hamedp71-1-V"
-      - "🇬🇧 hamedp71-2-V"
-      - "🇪🇸 hamedp71-3-V"
-      - "🇫🇷 hamedp71-4-V"
-      - "🇫🇷 hamedp71-5-V"
-      - "🇳🇱 hamedp71-6-V"
-      - "🇨🇦 hamedp71-7-V"
-      - "🇩🇪 hamedp71-8-V"
-      - "🇩🇪 hamedp71-9-V"
-      - "🇸🇬 hamedp71-10-V"
-      - "🇺🇸 hamedp71-11-V"
-      - "🇦🇺 hamedp71-12-V"
 
   - name: "🔁 سیستم فیلبک"
     type: fallback
     url: "http://www.gstatic.com/generate_204"
     interval: 300
     proxies:
-      - "🇹🇷 hamedp71 - WireGuard"
-      - "🇦🇪 hamedp71 - WireGuard"
+      - "🇩🇪 ShadowTLS-Proxy"
+      - "🇩🇪 anytls-443"
       - "🇺🇸 US-hysteria"
       - "🇺🇸 1 US-hysteria"
       - "🇳🇱 NL-hysteria"
-      - "🇩🇪 anytls-443"
+      - "🇸🇪 hamedp71 hy2"
+      - "🇳🇱 hamedp71 hy2"
+      - "🇹🇷 hamedp71 - WireGuard"
+      - "🇦🇪 hamedp71 - WireGuard"
       - "🇳🇱 1 hamedp71 - Vless"
       - "🇳🇱 2 hamedp71 - Vless"
       - "🇳🇱 3 hamedp71 - Vless"
@@ -1366,6 +1387,18 @@ proxy-groups:
       - "🇩🇪-Direct-VLESS"
       - "🇩🇪-AD-CDN-VLESS"
       - "🇩🇪-Telegram-VLESS"
+      - "🇬🇧 hamedp71-1-V"
+      - "🇬🇧 hamedp71-2-V"
+      - "🇪🇸 hamedp71-3-V"
+      - "🇫🇷 hamedp71-4-V"
+      - "🇫🇷 hamedp71-5-V"
+      - "🇳🇱 hamedp71-6-V"
+      - "🇨🇦 hamedp71-7-V"
+      - "🇩🇪 hamedp71-8-V"
+      - "🇩🇪 hamedp71-9-V"
+      - "🇸🇬 hamedp71-10-V"
+      - "🇺🇸 hamedp71-11-V"
+      - "🇦🇺 hamedp71-12-V"
       - "🇸🇪 hamedp71-1-V"
       - "🇸🇪 hamedp71-2-V"
       - "🇸🇪 hamedp71-3-V"
@@ -1380,20 +1413,6 @@ proxy-groups:
       - "🇸🇪 hamedp71-12-V"
       - "🇸🇪 hamedp71-13-V"
       - "🇸🇪 hamedp71-14-V"
-      - "🇸🇪 hamedp71 hy2"
-      - "🇳🇱 hamedp71 hy2"
-      - "🇬🇧 hamedp71-1-V"
-      - "🇬🇧 hamedp71-2-V"
-      - "🇪🇸 hamedp71-3-V"
-      - "🇫🇷 hamedp71-4-V"
-      - "🇫🇷 hamedp71-5-V"
-      - "🇳🇱 hamedp71-6-V"
-      - "🇨🇦 hamedp71-7-V"
-      - "🇩🇪 hamedp71-8-V"
-      - "🇩🇪 hamedp71-9-V"
-      - "🇸🇬 hamedp71-10-V"
-      - "🇺🇸 hamedp71-11-V"
-      - "🇦🇺 hamedp71-12-V"
 
 rule-providers:
   malware:
